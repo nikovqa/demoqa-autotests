@@ -57,7 +57,7 @@ public class DemoqaPracticeForm {
         $(".modal-content").shouldHave(text("Thanks for submitting the form"),
                 text("Gregor"), text("Zamza"), text("gregor@zamza.com"),
                 text("Male"), text("11 September,1991"), text("Physics"),
-                text("Music"), text("persone.jpg"), text("F 12/8, Basement, Malviya Nagar"),
+                text("Music"), text("persone.jpeg"), text("F 12/8, Basement, Malviya Nagar"),
                 text("NCR"), text("Delhi"));
     }
 
