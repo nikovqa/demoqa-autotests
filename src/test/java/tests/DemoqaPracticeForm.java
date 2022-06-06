@@ -54,18 +54,15 @@ public class DemoqaPracticeForm {
         $("#stateCity-wrapper").$(byText("Delhi")).click();
         $("#submit").click();
 
-        $(".modal-content").shouldHave(text("Thanks for submitting the form"),
-                text("Gregor"),
-                text("Zamza"),
-                text("gregor@zamza.com"),
-                text("Male"),
-                text("11 September,1991"),
-                text("Physics"),
-                text("Music"),
-                text("persone.jpeg"),
-                text("F 12/8, Basement, Malviya Nagar"),
-                text("NCR"),
-                text("Delhi"));
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+
+        checkTable("Date of Birth", "11 September,1991");
+
+    }
+
+    void checkTable(String key, String value) {
+        $(".table-responsive").$(byText(key)).parent().shouldHave(text(value));
+
     }
 
 }
