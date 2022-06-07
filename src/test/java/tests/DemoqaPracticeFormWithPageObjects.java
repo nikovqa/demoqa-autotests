@@ -24,8 +24,13 @@ public class DemoqaPracticeFormWithPageObjects extends TestBase {
                 .submitForm()
                 .checkResult("Student Name", "Gregor Zamza")
                 .checkResult("Student Email", "gregor@zamza.com")
+                .checkResult("Gender", "Male")
                 .checkResult("Date of Birth", "11 September,1991")
-                .checkResult("Mobile", "3817513812");
+                .checkResult("Subjects", "Physics")
+                .checkResult("Hobbies", "Music, Sports")
+                .checkResult("Picture", "persone.jpeg")
+                .checkResult("Address", "F 12/8, Basement, Malviya Nagar")
+                .checkResult("State and City", "NCR Delhi");
 
 
 
