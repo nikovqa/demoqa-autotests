@@ -5,10 +5,12 @@ import org.junit.jupiter.api.BeforeAll;
 import pages.DemoqaPracticeFormPage;
 import pages.components.ResultsTableComponent;
 
-public class TestBase extends TestData {
+public class TestBase {
+    TestData testData = new TestData();
 
     DemoqaPracticeFormPage demoqaPracticeFormPage = new DemoqaPracticeFormPage();
     ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
+
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
