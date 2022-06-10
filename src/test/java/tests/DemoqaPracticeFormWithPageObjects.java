@@ -9,31 +9,28 @@ public class DemoqaPracticeFormWithPageObjects extends TestBase {
     @Test
     void fillPracticeForm() {
         demoqaPracticeFormPage.openPage()
-                .setFirstName("Gregor")
-                .setLastName("Zamza")
-                .setEmail("gregor@zamza.com")
-                .setGender("Male")
-                .setPhoneNumber("3817513812")
-                .setDateOfBirth("11", "September", "1991")
-                .setSubject("Physics")
-                .chooseHobbies("Music").chooseHobbies("Sports")
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setEmail(email)
+                .setGender(gender)
+                .setPhoneNumber(phone)
+                .setDateOfBirth(day, month, year)
+                .setSubject(subject)
+                .chooseHobbies(hobby)
                 .uploadPicture()
-                .setCurrentAdress("F 12/8, Basement, Malviya Nagar")
-                .chooseState("NCR")
-                .chooseCity("Delhi")
+                .setCurrentAdress(currentAddress)
+                .chooseState(state)
+                .chooseCity(city)
                 .submitForm()
-                .checkResult("Student Name", "Gregor Zamza")
-                .checkResult("Student Email", "gregor@zamza.com")
-                .checkResult("Gender", "Male")
-                .checkResult("Date of Birth", "11 September,1991")
-                .checkResult("Subjects", "Physics")
-                .checkResult("Hobbies", "Music, Sports")
+                .checkResult("Student Name", firstName)
+                .checkResult("Student Email", email)
+                .checkResult("Gender", gender)
+                .checkResult("Date of Birth", day + " " + month + "," + year)
+                .checkResult("Subjects", subject)
+                .checkResult("Hobbies", hobby)
                 .checkResult("Picture", "persone.jpeg")
-                .checkResult("Address", "F 12/8, Basement, Malviya Nagar")
-                .checkResult("State and City", "NCR Delhi");
-
-
-
+                .checkResult("Address", currentAddress)
+                .checkResult("State and City", state + " " +  city);
     }
 
 }

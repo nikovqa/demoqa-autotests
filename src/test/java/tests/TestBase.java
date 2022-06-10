@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import pages.DemoqaPracticeFormPage;
 import pages.components.ResultsTableComponent;
 
-public class TestBase {
+public class TestBase extends TestData {
 
     DemoqaPracticeFormPage demoqaPracticeFormPage = new DemoqaPracticeFormPage();
     ResultsTableComponent resultsTableComponent = new ResultsTableComponent();
