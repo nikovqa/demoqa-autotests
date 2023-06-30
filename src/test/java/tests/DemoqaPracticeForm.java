@@ -9,13 +9,14 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 public class DemoqaPracticeForm {
-    @Disabled("bad way")
+
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadTimeout = 50000;
     }
+    @Disabled("bad way")
     @DisplayName( "FillForm" )
     @Test
     void fillPracticeForm() {

@@ -21,7 +21,6 @@ public class DemoqaPracticeFormPage {
         open("/automation-practice-form");
         pageBase.addRemove();
         pageBase.closeFooter();
-
         return this;
     }
     public DemoqaPracticeFormPage setFirstName(String value){
