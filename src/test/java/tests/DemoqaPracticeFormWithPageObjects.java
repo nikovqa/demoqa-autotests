@@ -1,11 +1,13 @@
 package tests;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 
 public class DemoqaPracticeFormWithPageObjects extends TestBase {
 
 
+    @DisplayName( "FillFormPO" )
     @Test
     void fillPracticeForm() {
         demoqaPracticeFormPage.openPage()
