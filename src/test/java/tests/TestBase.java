@@ -17,7 +17,11 @@ public class TestBase {
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadTimeout = 50000;
+        //Configuration.pageLoadTimeout = 50000;
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
+
+
 /*        ChromeOptions options = new ChromeOptions();
         options.addArguments( "--remote-allow-origins=*" );
         options.addArguments("--disable-dev-shm-usage");
