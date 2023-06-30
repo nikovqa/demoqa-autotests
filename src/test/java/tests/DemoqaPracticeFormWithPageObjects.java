@@ -4,9 +4,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag( "my" )
 public class DemoqaPracticeFormWithPageObjects extends TestBase {
 
-    @Tag( "my" )
+
     @DisplayName( "FillFormPO" )
     @Test
     void fillPracticeForm() {
