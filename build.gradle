@@ -34,15 +34,15 @@ dependencies {
             testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.2')
 
 }
-/*test {
-    useJUnitPlatform()
-}*/
-tasks.withType(Test){
+test {
     useJUnitPlatform()
 }
-task mytest(type: Test) {
+/*tasks.withType(Test){
+    useJUnitPlatform()
+}*/
+/*task mytest(type: Test) {
     useJUnitPlatform {
         includeTags("my")
     }
-}
+}*/
 
