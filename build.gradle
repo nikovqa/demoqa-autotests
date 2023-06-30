@@ -37,9 +37,9 @@ dependencies {
 /*test {
     useJUnitPlatform()
 }*/
-tasks.withType(Test){
+/*tasks.withType(Test){
     useJUnitPlatform()
-}
+}*/
 task mytest(type: Test) {
     useJUnitPlatform {
         includeTags("my")
