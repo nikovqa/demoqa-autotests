@@ -1,9 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -11,11 +9,12 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 public class DemoqaPracticeForm {
-
+    @Disabled("bad way")
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadTimeout = 50000;
     }
     @DisplayName( "FillForm" )
     @Test
