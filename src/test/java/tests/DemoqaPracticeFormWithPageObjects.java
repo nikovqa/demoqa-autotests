@@ -21,7 +21,7 @@ public class DemoqaPracticeFormWithPageObjects extends TestBase {
                 .setSubject(testData.subject)
                 .chooseHobbies(testData.hobby)
                 .uploadPicture()
-                .setCurrentAdress(testData.currentAddress)
+                .setCurrentAddress(testData.currentAddress)
                 .chooseState(testData.state)
                 .chooseCity(testData.city)
                 .submitForm()
