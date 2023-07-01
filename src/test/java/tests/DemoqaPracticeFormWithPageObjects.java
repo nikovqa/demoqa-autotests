@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 public class DemoqaPracticeFormWithPageObjects extends TestBase {
 
-    @Tag("my")
+    @Tag("remote")
     @DisplayName( "FillFormPO" )
     @Test
     void fillPracticeForm() {

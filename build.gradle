@@ -40,9 +40,9 @@ test {
 tasks.withType(Test){
     useJUnitPlatform()
 }
-task mytest(type: Test) {
+task remote(type: Test) {
     useJUnitPlatform {
-        includeTags("my")
+        includeTags("remote")
     }
 }
 
