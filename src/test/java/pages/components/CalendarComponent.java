@@ -7,7 +7,7 @@ public class CalendarComponent {
     public void setDate(String day, String month, String year) {
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
-       if (day.length() < 10) {
+       if (day.length() < 2) {
            $(".react-datepicker__day--00" + day).click();
        } else
         $(".react-datepicker__day--0" + day).click();
