@@ -9,26 +9,26 @@ import static java.lang.String.format;
 @Disabled
 public class SystemPropertiesTest {
 
-
+    @Disabled
     @Test
     void simplePropertyTest() {
         String browserName = System.getProperty( "browser" );
         System.out.println(browserName); //null
     }
-
+    @Disabled
     @Test
     void simplePropertyTest1() {
         System.setProperty( "browser", "opera" );
         String browserName = System.getProperty( "browser" );
         System.out.println(browserName); //opera
     }
-
+    @Disabled
     @Test
     void simplePropertyTest2() {
         String browserName = System.getProperty( "browser", "mozilla" );
         System.out.println(browserName); //mozilla
     }
-
+    @Disabled
     @Test
     void simplePropertyTest3() {
         System.setProperty( "browser", "opera" );

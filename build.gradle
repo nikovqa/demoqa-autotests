@@ -54,7 +54,7 @@ tasks.withType(Test) {
 
 task remote(type: Test) {
     useJUnitPlatform {
-        includeTags("oneproperty")
+        includeTags("remote")
     }
 }
 
