@@ -1,6 +1,6 @@
 plugins {
     id 'java-library'
-   id 'io.qameta.allure' version '2.10.0'
+    id 'io.qameta.allure' version '2.11.2'
 }
 group 'ru.nikov.allure'
 version '1.0-SNAPSHOT'
@@ -9,18 +9,18 @@ repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.19.0",
+def allureVersion = "2.21.0",
     slf4jVersion = "2.0.7"
 
 allure {
     report {
-        version.set("2.18.1")
+        version.set(allureVersion)
     }
     adapter {
         aspectjWeaver.set(true)
         frameworks {
             junit5 {
-                adapterVersion.set("2.18.1")
+                adapterVersion.set(allureVersion)
             }
         }
     }
@@ -35,19 +35,29 @@ dependencies {
             "com.github.javafaker:javafaker:1.0.2",
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "org.slf4j:slf4j-simple:$slf4jVersion",
+            "org.aspectj:aspectjweaver:1.9.19",
     )
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.2')
+}
 
-}
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
-}
-tasks.withType(Test){
-    useJUnitPlatform()
-}
-task remote(type: Test) {
-    useJUnitPlatform {
-        includeTags("remote")
+    systemProperties(System.getProperties())
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
     }
 }
+
+
+task remote(type: Test) {
+    useJUnitPlatform {
+        includeTags("oneproperty")
+    }
+}
+
+
+
 

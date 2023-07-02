@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 public class DemoqaPracticeFormWithPageObjects extends TestBase {
 
     @Tag("remote")
-    @DisplayName( "FillFormPO" )
+    @DisplayName( "Fill registration form" )
     @Test
     void fillPracticeForm() {
         step( "Open form", () -> {

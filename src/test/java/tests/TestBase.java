@@ -18,14 +18,15 @@ public class TestBase {
     DemoqaPracticeFormPage demoqaPracticeFormPage = new DemoqaPracticeFormPage();
 
     @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        // Configuration.pageLoadTimeout = 50000;
+    static void setConfig() {
+        Configuration.baseUrl = System.getProperty( "base_url","https://demoqa.com" );
+        Configuration.browserSize = System.getProperty("browser_size");
+        Configuration.browser = System.getProperty( "browser", "opera" );
+        Configuration.browserVersion = System.getProperty( "browser_version" );
+        Configuration.remote = "https://user1:1234@" + System.getProperty( "selenoid_url","selenoid.autotests.cloud/wd/hub" );
 
-        Configuration.browserSize = "1920x1080";
-        Configuration.browser = "chrome";
-        Configuration.browserVersion = "100.0";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
+//        Configuration.pageLoadTimeout = 50000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -34,14 +35,11 @@ public class TestBase {
                 ));
         Configuration.browserCapabilities = capabilities;
 
-
-/*        ChromeOptions options = new ChromeOptions();
+/*      ChromeOptions options = new ChromeOptions();
         options.addArguments( "--remote-allow-origins=*" );
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         WebDriver driver = new ChromeDriver(options);*/
-
-
     }
 
     @BeforeEach
@@ -50,7 +48,6 @@ public class TestBase {
     }
 
     @AfterEach
-    //void addScreenshot() {Screenshots.screenshotAs();}
     void addAttachments(){
         Attach.screenshotAs( "last screenshot" );
         Attach.pageSource();
