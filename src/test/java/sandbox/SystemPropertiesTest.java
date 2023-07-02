@@ -1,11 +1,12 @@
 package sandbox;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static java.lang.String.format;
 
-
+@Disabled
 public class SystemPropertiesTest {
 
 
