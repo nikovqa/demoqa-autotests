@@ -19,16 +19,18 @@ public class TestBase {
 
     @BeforeAll
     static void setConfig() {
-        Configuration.browser = System.getProperty( "browser", "chrome" );
-        Configuration.browserVersion = System.getProperty( "browserVersion", "100" );
+//        Configuration.browser = System.getProperty( "browserName", "opera" );
+//        Configuration.browserVersion = System.getProperty( "browserVersion", "85" );
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty( "baseUrl","https://demoqa.com" );
         Configuration.remote = "https://user1:1234@" + System.getProperty( "selenoidUrl","selenoid.autotests.cloud/wd/hub" );
 
 
-//        Configuration.pageLoadTimeout = 50000;
+        Configuration.pageLoadTimeout = 50000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("browserName", "opera");
+        capabilities.setCapability("browserVersion", "85.0");
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true
