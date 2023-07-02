@@ -33,8 +33,6 @@ public class TestBase {
                 "enableVNC", true,
                 "enableVideo", true
                 ));
-        capabilities.setCapability("browserName", "opera");
-        capabilities.setCapability("browserVersion", "85.0");
         Configuration.browserCapabilities = capabilities;
 
 
