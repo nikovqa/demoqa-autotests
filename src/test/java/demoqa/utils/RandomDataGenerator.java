@@ -1,4 +1,4 @@
-package utils;
+package demoqa.utils;
 import java.util.Random;
 
 public class RandomDataGenerator {

@@ -1,7 +1,7 @@
-package tests;
+package demoqa.UITests;
 
 import com.github.javafaker.Faker;
-import utils.RandomDataGenerator;
+import demoqa.utils.RandomDataGenerator;
 
 import java.util.Locale;
 

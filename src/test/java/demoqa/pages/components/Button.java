@@ -1,8 +1,6 @@
-package pages.components;
+package demoqa.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
-
-import java.nio.channels.SelectableChannel;
 
 public class Button {
 
