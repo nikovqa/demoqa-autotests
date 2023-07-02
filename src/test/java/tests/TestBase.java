@@ -19,11 +19,11 @@ public class TestBase {
 
     @BeforeAll
     static void setConfig() {
-        Configuration.baseUrl = System.getProperty( "base_url","https://demoqa.com" );
-        Configuration.browserSize = System.getProperty("browser_size");
+        Configuration.baseUrl = System.getProperty( "baseUrl","https://demoqa.com" );
+        Configuration.browserSize = System.getProperty("browserSize");
         Configuration.browser = System.getProperty( "browser", "chrome" );
-        Configuration.browserVersion = System.getProperty( "browser_version" );
-        Configuration.remote = "https://user1:1234@" + System.getProperty( "selenoid_url","selenoid.autotests.cloud/wd/hub" );
+        Configuration.browserVersion = System.getProperty( "browserVersion", "100" );
+        Configuration.remote = "https://user1:1234@" + System.getProperty( "selenoidUrl","selenoid.autotests.cloud/wd/hub" );
 
 
 //        Configuration.pageLoadTimeout = 50000;
