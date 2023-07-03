@@ -1,12 +1,13 @@
 {
   "base": {
     "logo": "",
-    "project": "Fill practice form",
+    "project": "${JOB_BASE_NAME}",
     "environment": "qa.guru",
     "comment": "Any comment here, @nikov108",
-    "reportLink": "https://jenkins.autotests.cloud",
-    "language": "ru",
-    "allureFolder": "build/reports/allure-report/widgets/",
+    "reportLink": "${BUILD_URL}",
+    "language": "en",
+    "messenger": "telegram",
+    "allureFolder": "build/allure-report/",
     "enableChart": true
   },
   "telegram": {
@@ -15,38 +16,3 @@
     "replyTo": ""
   }
 }
-  /*
-  "slack": {
-    "token": "",
-    "chat": "",
-    "replyTo": ""
-  },
-  "mattermost": {
-    "url": "",
-    "token": "",
-    "chat": ""
-  },
-  "skype": {
-    "appId": "",
-    "appSecret": "",
-    "serviceUrl": "",
-    "conversationId": "",
-    "botId": "",
-    "botName": ""
-  },
-  "mail": {
-    "host": "",
-    "port": "",
-    "username": "",
-    "password": "",
-    "securityProtocol": null,
-    "from": "",
-    "recipient": ""
-  },
-  "proxy": {
-    "host": "",
-    "port": 0,
-    "username": "",
-    "password": ""
-  }
-}*/
