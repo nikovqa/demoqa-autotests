@@ -16,14 +16,21 @@ public class TestBase {
     TestData testData = new TestData();
 
     DemoqaPracticeFormPage demoqaPracticeFormPage = new DemoqaPracticeFormPage();
+/*    static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+    static String login = config.login();
+    static String password = config.password();*/
+
 
     @BeforeAll
     static void setConfig() {
-        Configuration.browser = System.getProperty( "browserName", "opera" );
+        Configuration.browser = System.setProperty( "browserName", "opera" );
         Configuration.browserVersion = System.getProperty( "browserVersion", "85.0" );
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty( "baseUrl","https://demoqa.com" );
         Configuration.remote = "https://user1:1234@" + System.getProperty( "selenoidUrl","selenoid.autotests.cloud/wd/hub" );
+//        Configuration.remote = "https://" + login + ":" + password +"@" + System.getProperty( "selenoidUrl","selenoid.autotests.cloud/wd/hub" );
+
+
 
 
 //        Configuration.pageLoadTimeout = 50000;
