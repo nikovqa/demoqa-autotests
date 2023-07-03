@@ -23,7 +23,7 @@ public class TestBase {
 
     @BeforeAll
     static void setConfig() {
-        Configuration.browser = System.setProperty( "browserName", "opera" );
+        Configuration.browser = System.getProperty( "browserName", "opera" );
         Configuration.browserVersion = System.getProperty( "browserVersion", "85.0" );
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty( "baseUrl","https://demoqa.com" );
