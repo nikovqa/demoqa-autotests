@@ -14,8 +14,6 @@
 *.properties
 
 # Package Files #
-config.json
-draft.txt
 *.jar
 *.war
 *.nar
@@ -41,3 +39,4 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
+notifications/
