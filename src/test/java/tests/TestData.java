@@ -1,8 +1,6 @@
 package tests;
 
 import com.github.javafaker.Faker;
-import config.CredentialsConfig;
-import org.aeonbits.owner.ConfigFactory;
 import utils.RandomDataGenerator;
 
 import java.util.Locale;
